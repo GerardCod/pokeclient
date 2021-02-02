@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dwp"
+    }
+  },
+  "defaultProject": "dwp",
+  "cli": {
+    "analytics": false
+  }
 }
