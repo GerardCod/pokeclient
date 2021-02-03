@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     .subscribe(
       (data: Pokemon) => {
         this.pokemon = data;
+        localStorage.setItem('pokemon', JSON.stringify(this.pokemon));
       }
     )
   }

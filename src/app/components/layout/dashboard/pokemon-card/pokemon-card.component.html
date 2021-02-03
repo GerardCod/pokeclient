@@ -1,5 +1,10 @@
-<article class="mx-w-2xl w-3/5 h-2/5 rounded shadow-md grid-cols-3 grid-rows-1 gap-x-0.5 overflow-hidden">
-    <figure class="col-span-1">
+<article class="w-5/6 m-auto h-5/6 rounded-lg shadow-lg grid grid-cols-3 grid-rows-1 gap-x-0.5 overflow-hidden">
+    <figure class="col-start-1 col-end-2 bg-white">
         <img class="w-full h-full object-cover" [src]="pokemon.sprites.front_default" alt="pokemon_sprite">
     </figure>
+    <section class="col-start-2 col-end-4 bg-gray-50 p-6">
+        <h2 class="font-sans font-bold text-2xl text-indigo-600">{{pokemon.name | titlecase}}</h2>
+        <p class="mb-4"><span class="mr-4">Peso: {{pokemon.weight}}</span>    <span>Altura: {{pokemon.height}}</span></p>
+        <h3 class="font-sans font-bold text-xl text-gray-700">Tipos</h3>
+    </section>
 </article>

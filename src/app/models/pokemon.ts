@@ -4,7 +4,7 @@ export class Pokemon {
         public name: string,
         public height: number,
         public order: number,
-        public weigth: number,
+        public weight: number,
         public sprites: Sprites,
         public types: Type[],
         public abilities: Ability[]
