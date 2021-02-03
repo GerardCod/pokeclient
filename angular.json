@@ -69,10 +69,10 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:browse",
           "options": {
-            "browserTarget": "dwp:build",
             "customWebpackConfig": {
               "path": "./webpack.config.js"
-            }
+            },
+            "browserTarget": "dwp:build"
           },
           "configurations": {
             "production": {
