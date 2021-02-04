@@ -20,10 +20,22 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.pokemonSubscription.unsubscribe();
+    if (this.pokemonSubscription) {
+      this.pokemonSubscription.unsubscribe();
+    }
   }
 
   getPokemon(name: string): void {
+    const pokemon: Pokemon = JSON.parse(localStorage.getItem('pokemon'));
+    if (pokemon && pokemon.name === name) {
+      this.pokemon = pokemon;
+    } else {
+      this.getPokemonAPI(name)
+    }
+  }
+  
+  
+  getPokemonAPI(name: string): void {
     this.pokemonSubscription = this.service.getPokemonByName(name)
     .subscribe(
       (data: Pokemon) => {
@@ -32,5 +44,4 @@ export class DashboardComponent implements OnInit, OnDestroy {
       }
     )
   }
-
 }

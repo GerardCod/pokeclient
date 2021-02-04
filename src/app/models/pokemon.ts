@@ -11,21 +11,21 @@ export class Pokemon {
     ) {}
 }
 
-class Type {
+export class Type {
     constructor(
         public slot: number,
         public type: TypeDefinition
     ){}
 }
 
-class TypeDefinition {
+export class TypeDefinition {
     constructor(
         public name: string,
         public url: string
     ) {}
 }
 
-class Ability {
+export class Ability {
     constructor(
         public slot: number,
         public is_hidden: boolean,
@@ -33,14 +33,14 @@ class Ability {
     ) {}
 }
 
-class AbilityDefinition {
+export class AbilityDefinition {
     constructor(
         public name: string,
         public url: string
     ) {}
 }
 
-class Sprites {
+export class Sprites {
     constructor(
         public back_default: string,
         public front_default: string
