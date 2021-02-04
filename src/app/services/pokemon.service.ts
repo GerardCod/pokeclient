@@ -35,6 +35,6 @@ export class PokemonService {
 
   public getPokemonItems(): Item[] {
     const pokemon: Pokemon = JSON.parse(localStorage.getItem('pokemon'));
-    return pokemon.items;
+    return pokemon.held_items;
   }
 }

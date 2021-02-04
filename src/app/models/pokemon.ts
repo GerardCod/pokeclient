@@ -9,7 +9,7 @@ export class Pokemon {
         public types: Type[],
         public abilities: Ability[],
         public moves: Move[],
-        public items: Item[]
+        public held_items: Item[]
     ) {}
 }
 

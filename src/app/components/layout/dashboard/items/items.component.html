@@ -1,1 +1,3 @@
-<p>items works!</p>
+<ng-container *ngIf="items">
+    <p *ngFor="let item of items" class="px-6 py-4 border-solid border-b-2 border-gray-200">{{item.item.name}}</p>
+</ng-container>
