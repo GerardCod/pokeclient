@@ -8,10 +8,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PokemonCardComponent } from './dashboard/pokemon-card/pokemon-card.component';
 import { PokemonTypeComponent } from './dashboard/pokemon-type/pokemon-type.component';
 import { AbilitiesComponent } from './dashboard/abilities/abilities.component';
+import { ItemsComponent } from './dashboard/items/items.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, DashboardComponent, PokemonCardComponent, PokemonTypeComponent, AbilitiesComponent],
+  declarations: [LayoutComponent, DashboardComponent, PokemonCardComponent, PokemonTypeComponent, AbilitiesComponent, ItemsComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,
