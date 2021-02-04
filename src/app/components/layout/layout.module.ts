@@ -7,10 +7,11 @@ import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PokemonCardComponent } from './dashboard/pokemon-card/pokemon-card.component';
 import { PokemonTypeComponent } from './dashboard/pokemon-type/pokemon-type.component';
+import { AbilitiesComponent } from './dashboard/abilities/abilities.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, DashboardComponent, PokemonCardComponent, PokemonTypeComponent],
+  declarations: [LayoutComponent, DashboardComponent, PokemonCardComponent, PokemonTypeComponent, AbilitiesComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,
