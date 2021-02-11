@@ -1,0 +1,14 @@
+<form [formGroup]="group" (ngSubmit)="emitSearch()" class="grid grid-cols-3">
+    <div></div>
+    <mat-form-field appearance="outline">
+        <mat-label>Ingresa el nombre o el id de un pokemon</mat-label>
+        <input matInput placeholder="1 o pikachu" type="text" formControlName="search">
+        <button mat-icon-button matSuffix type="submit">
+            <mat-icon>search</mat-icon>
+        </button>
+        <div *ngIf="group.get('search').errors && group.get('search').touched">
+            <mat-error *ngIf="group.get('search').hasError('required')">El id o el nombre de un pokemon es necesario</mat-error>
+        </div>
+    </mat-form-field>
+    <div></div>
+</form>

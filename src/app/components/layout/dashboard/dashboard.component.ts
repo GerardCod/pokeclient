@@ -16,7 +16,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
   constructor(private service: PokemonService) { }
   
   ngOnInit(): void {
-    this.getPokemon('pikachu');
   }
 
   ngOnDestroy(): void {
@@ -25,17 +24,43 @@ export class DashboardComponent implements OnInit, OnDestroy {
     }
   }
 
-  getPokemon(name: string): void {
+  getPokemon(search: string): void {
+    const id = +search;
+    if (id) {
+      this.getPokemonById(id);
+    } else {
+      this.getPokemonByName(search);
+    }
+  }
+
+  getPokemonById(id: number): void {
+    const pokemon: Pokemon = JSON.parse(localStorage.getItem('pokemon'));
+    if (pokemon && pokemon.id === id) {
+      this.pokemon = pokemon;
+    } else {
+      this.getPokemonByIdAPI(id);
+    }
+  }
+
+  getPokemonByIdAPI(id: number): void {
+    this.pokemonSubscription = this.service.getPokemonById(id).subscribe(
+      (data: Pokemon) => {
+        this.pokemon = data;
+        localStorage.setItem('pokemon', JSON.stringify(data));
+      }
+    );
+  }
+
+  getPokemonByName(name: string): void {
     const pokemon: Pokemon = JSON.parse(localStorage.getItem('pokemon'));
     if (pokemon && pokemon.name === name) {
       this.pokemon = pokemon;
     } else {
-      this.getPokemonAPI(name)
+      this.getPokemonByNameAPI(name)
     }
   }
   
-  
-  getPokemonAPI(name: string): void {
+  getPokemonByNameAPI(name: string): void {
     this.pokemonSubscription = this.service.getPokemonByName(name)
     .subscribe(
       (data: Pokemon) => {

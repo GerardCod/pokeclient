@@ -17,7 +17,7 @@ import { MovementsComponent } from './dashboard/movements/movements.component';
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class LayoutModule { }
