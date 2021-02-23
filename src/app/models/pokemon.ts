@@ -1,3 +1,12 @@
+export class PageResults {
+    constructor(
+        public count: number,
+        public next: string,
+        public previous: string,
+        public results: Pokemon[]
+    ) {}
+}
+
 export class Pokemon {
     constructor(
         public id: number,
