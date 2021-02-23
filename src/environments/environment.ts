@@ -16,6 +16,9 @@ export const environment = {
     ability: {
       id: 'ability/:id'
     },
+    page: {
+      url: 'pokemon?limit=:limit&offset=:offset',
+    }
   }
 };
 
