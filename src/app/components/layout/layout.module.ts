@@ -10,10 +10,20 @@ import { PokemonTypeComponent } from './dashboard/pokemon-type/pokemon-type.comp
 import { AbilitiesComponent } from './dashboard/abilities/abilities.component';
 import { ItemsComponent } from './dashboard/items/items.component';
 import { MovementsComponent } from './dashboard/movements/movements.component';
+import { PokemonItemComponent } from '../dashboard/pokemon-item/pokemon-item.component';
 
 
 @NgModule({
-  declarations: [LayoutComponent, DashboardComponent, PokemonCardComponent, PokemonTypeComponent, AbilitiesComponent, ItemsComponent, MovementsComponent],
+  declarations: [
+    LayoutComponent,
+    DashboardComponent,
+    PokemonCardComponent,
+    PokemonTypeComponent,
+    AbilitiesComponent,
+    ItemsComponent,
+    MovementsComponent,
+    PokemonItemComponent,
+  ],
   imports: [
     CommonModule,
     LayoutRoutingModule,

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Ability, Item, Move, Pokemon } from '../models/pokemon';
+import { Ability, Item, Move, PageResults, Pokemon } from '../models/pokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +36,9 @@ export class PokemonService {
   public getPokemonItems(): Item[] {
     const pokemon: Pokemon = JSON.parse(localStorage.getItem('pokemon'));
     return pokemon.held_items;
+  }
+
+  public getPokemonsByPage(limit: number, offset: number): Observable<PageResults> {
+    return this.client.get<PageResults>(`${this.endpoint.api}${this.endpoint.pokemon.page.replace(':limit', limit.toString()).replace(':offset', offset.toString())}`) 
   }
 }

@@ -15,6 +15,6 @@ import { MaterialModule } from '../../material/material.module';
     ReactiveFormsModule,
     MaterialModule,
   ],
-  exports: [FooterComponent, HeaderComponent, SearchComponent]
+  exports: [FooterComponent, HeaderComponent, SearchComponent, MaterialModule]
 })
 export class SharedModule { }

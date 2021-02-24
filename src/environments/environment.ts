@@ -8,16 +8,14 @@ export const environment = {
     api: 'https://pokeapi.co/api/v2/',
     pokemon: {
       id: 'pokemon/:id',
-      name: 'pokemon/:name'
+      name: 'pokemon/:name',
+      page: 'pokemon?limit=:limit&offset=:offset'
     },
     type: {
       id: 'type/:id'
     },
     ability: {
       id: 'ability/:id'
-    },
-    page: {
-      url: 'pokemon?limit=:limit&offset=:offset',
     }
   }
 };

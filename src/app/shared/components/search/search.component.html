@@ -6,9 +6,9 @@
         <button mat-icon-button matSuffix type="submit">
             <mat-icon>search</mat-icon>
         </button>
-        <div *ngIf="group.get('search').errors && group.get('search').touched">
-            <mat-error *ngIf="group.get('search').hasError('required')">El id o el nombre de un pokemon es necesario</mat-error>
-        </div>
+        <mat-error *ngIf="group.get('search').errors && group.get('search').touched">
+            <p *ngIf="group.get('search').hasError('required')">El nombre del pokemon es necesario</p>
+        </mat-error>
     </mat-form-field>
     <div></div>
 </form>

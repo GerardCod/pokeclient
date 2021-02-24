@@ -1,2 +1,9 @@
 <app-search (search)="getPokemon($event)"></app-search>
+<mat-paginator [length]="length"
+    [pageSize]="paginatorOpts.pageSize"
+    [pageSizeOptions]="paginatorOpts.pageOptions"
+    (page)="processPage($event)"></mat-paginator> 
 <app-pokemon-card *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-card>
+<ng-container *ngIf="pokemons">
+    <app-pokemon-item *ngFor="let pok of pokemons" [pokemon]="pok"></app-pokemon-item>
+</ng-container>
